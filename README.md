@@ -24,11 +24,11 @@ export const actionCreator = {
 
 ### Connect
 ```javascript
-import wrapObjByDispatch from 'wrap-dispatch-tree';
+import wrapDisptachTree from 'wrap-dispatch-tree';
 import { actionCreator } from 'redux/'
 @connect(state => ({
     data: state.data
-}), wrapObjByDispatch(actionCreator))
+}), wrapDisptachTree(actionCreator))
 ```
 
 
