@@ -1,7 +1,7 @@
-# this tool is used to bind tree structured action creators with dispatch
+# Tools used to bind tree structured action creators with dispatch
 
-### demo
-``` javascrip
+### Action Creator
+``` javascript
 export const actionCreator = {
     "acHome": {
         "acEditPanel": {
@@ -17,19 +17,17 @@ export const actionCreator = {
             "acInspector": {
                 editProps: function(key, val) { return { type: EDITPANEL_EDIT_PROP, key, val } }
             }
-        },
-        "acViewer": {
-            viewerClickComponent: function(id) { return { type: VIEWER_CLICK_COMPONENTS, id } }
         }
     }
 }
 ```
 
-```
-import wrapObjByDispatch from '@beisen/map-tree-dispatch';
-import { actionCreator } from 'redux/modules/uiBuilder'
+### Connect
+```javascript
+import wrapObjByDispatch from 'wrap-dispatch-tree';
+import { actionCreator } from 'redux/'
 @connect(state => ({
-    uiBuilderData: state.uiBuilderData
+    data: state.data
 }), wrapObjByDispatch(actionCreator))
 ```
 
