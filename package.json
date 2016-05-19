@@ -1,6 +1,6 @@
 {
   "name": "wrap-dispatch-tree",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "used to bind tree structured action creator with dispatch ",
   "main": "index.js",
   "scripts": {
